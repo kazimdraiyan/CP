@@ -26,7 +26,7 @@ def check_string(n, s):
     return "YES" if ok else "NO"
 
 
-def generate_test_cases(filename="sample_input.txt", T=10000, max_n=10000):
+def generate_test_cases(filename="cases.txt", T=10000, max_n=10000):
     answers = []
     with open(filename, "w") as f:
         f.write(str(T) + "\n")
@@ -38,7 +38,7 @@ def generate_test_cases(filename="sample_input.txt", T=10000, max_n=10000):
             f.write(s + "\n")
             answers.append(check_string(n, s))
     
-    with open("sample_output.txt", "w") as f2:
+    with open("output.txt", "w") as f2:
         for ans in answers:
             f2.write(ans + "\n")
 
